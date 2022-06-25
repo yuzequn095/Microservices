@@ -7,8 +7,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+
+// @Component is an annotation that allows Spring to automatically detect our custom beans.
 @Component // talking to the database
-           // @Component is an annotation that allows Spring to automatically detect our custom beans.
 public class UserDaoService {
     private static List<User> users = new ArrayList<>();
 

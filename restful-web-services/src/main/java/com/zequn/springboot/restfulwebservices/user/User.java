@@ -1,11 +1,17 @@
 package com.zequn.springboot.restfulwebservices.user;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue
     private Integer id;
 
     @Size(min=2, message="Name should have at least 2 character")
@@ -13,6 +19,10 @@ public class User {
 
     @Past // only should be in past date
     private Date birthDate;
+
+    public User() {
+
+    }
 
     public User(Integer id, String name, Date birthDate) {
         this.id = id;
