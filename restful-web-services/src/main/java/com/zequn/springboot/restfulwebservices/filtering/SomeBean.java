@@ -1,7 +1,9 @@
 package com.zequn.springboot.restfulwebservices.filtering;
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 // JsonIgnoreProperties(value={"field1", "field2"})
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String field1;
     private String field2;
